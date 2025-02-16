@@ -30,7 +30,7 @@ const RecommendBox = ({ recommendList,setSelectedMovie,setAddSearch, mode}) => {
                       <img className= 'poster' id='posterInRecommend' src={(movie.poster_path) ? `https://image.tmdb.org/t/p/w342${movie.poster_path}` : `/poster.jpeg`} alt={movie.title} />
                       {/* <img  className= 'poster' src="/poster.jpeg" alt="" id='posterInRecommend' /> */}
                       <div className="sideDetails">
-                          <h3>{movie.title}</h3>
+                          <h3>{movie?.title ? movie.title.slice(0, 60)+'...' : "No Title"}</h3>
                           <p>{movie.release_date}</p>
                       </div>
                   </div>
