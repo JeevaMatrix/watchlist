@@ -7,12 +7,13 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "postcss": "^8.5.2",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
     "react-icons": "^5.4.0",
     "react-scripts": "^5.0.1",
     "svgo": "^3.3.2",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "ajv": "8.17.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -39,7 +40,7 @@
     ]
   },
   "devDependencies": {
-    "ajv": "^7.2.4",
     "react-router-dom": "^7.1.5"
   }
+
 }
