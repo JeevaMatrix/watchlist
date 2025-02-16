@@ -54,7 +54,13 @@ function App() {
   useEffect(()=>{
     const fetchMovie = async()=>{
       try{
-        const res = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${apikey}&query=${addSearch}`);
+        const res = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${apikey}&query=${addSearch}`, {
+          headers: {
+            "Authorization": "Bearer YOUR_API_KEY",
+            "Content-Type": "application/json",
+          },
+          mode: "cors",
+        });
         if(!res.ok){
           throw Error('Data Not Received!')
         }
