@@ -1,0 +1,102 @@
+#root{
+  margin: 0px;
+}
+a{
+  text-decoration: none;
+}
+.App {
+  text-align: center;
+  text-decoration: none;
+}
+.poster{
+  border-radius: 8px;
+  margin-bottom: 5px;
+}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.isGrid{ /* main app for sidebar*/
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  grid-template-rows: 1fr auto;
+  column-gap: 40px;
+  height: 100vh;
+}
+.noGrid{
+  grid-template-columns: 0px 1fr;
+  grid-template-rows: 1fr auto;
+  display: block;
+  height: 100vh;
+  transition: grid-template-columns 0.5s ease-in-out;
+}
+
+.inside{
+  min-height: 100vh;
+  margin: 30px;
+  /* margin-left: 10px; */
+  overflow-y: auto ;
+  transition: transform 0.5s ease-in-out;
+}
+.isGrid .inside{
+  position: relative;
+  left: -50px;
+  transform: translateX(50px);
+  transition: transform 0.5s ease-in-out;
+}
+.noGrid .inside{
+  transform: translateX(0px);
+  margin-left: 38px; /**/
+  margin-right: 10px;
+}
+@media all and (max-width: 800px){
+  .isGrid{
+    margin: 0px;
+  }
+  .noGrid{
+    margin: 0px;
+  }
+}
+@media all and (max-width:800px){
+  .isGrid{
+    display: grid;
+    grid-template-columns: 1fr;
+    position: relative;
+  }
+  .isGrid .inside{
+    /* grid-template-columns: 1fr; */
+    width: 100%;
+    margin-left: 10px;
+  }
+}

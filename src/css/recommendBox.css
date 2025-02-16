@@ -1,0 +1,36 @@
+.recommend{
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: gray;
+    max-width: 480px;
+    margin-left: 10px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+#posterInRecommend{
+    width:80px;
+}
+
+.oneMovieInRecommend{
+    display: flex;
+    border: 1px solid black;
+    max-width: 480px;
+    min-width: 200px;
+    max-height: 80px;
+    margin: 0px;
+    margin-top: 0px;
+    padding: 0px;
+    line-height: 8px;
+    font-size: small;
+    border-radius: 8px;
+}
+.sideDetails p{
+    color: black;
+}
+.sideDetails{
+    margin-left: 20px;
+    text-align: left;
+}

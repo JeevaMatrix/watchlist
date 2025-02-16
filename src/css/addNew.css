@@ -1,0 +1,106 @@
+section{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.addNewForm{
+    text-align: center;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    max-height: 600px;
+
+}
+#addTitle{
+    padding: 10px;
+    border-radius: 5px;
+    font-size: large;
+    border: 1px solid black;
+    margin-bottom: 0px;
+}
+#addTitle:focus{
+    outline: 1px solid black;
+}
+#titleLabel{
+    text-align: start;
+}
+.titleBox{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0px;
+    margin:10px;
+    margin-top: 0px;
+}
+.radioSection{
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    justify-content: space-around;
+    color: black;
+    font-size: larger;
+}
+.radioSection:hover{
+    cursor: pointer;
+}
+.addMovieBtn{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: yellow;
+}
+.addMovieBtn:hover{
+    cursor: pointer;
+}
+
+.SelectedOneMovie{
+    /* border: 1px solid black;
+    border-radius: 8px;
+    max-width: 140px;
+    min-width: 140px;
+    max-height: 280px;
+    margin: 10px;
+    padding: 5px;
+    font-size: small;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center; */
+
+    border: 1px solid black;
+    border-radius: 8px;
+    max-width: 140px;
+    min-width: 140px;
+    max-height: 280px;
+    min-height: 0px;
+    margin: 10px;
+    padding: 5px;
+    font-size: small;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+.SelectedOneMovie :nth-child(1){
+    flex: 1;
+    max-height: 190px;
+  }
+
+.SelectedOneMovie h3{
+    margin: 0;
+}
+.SelectedOneMovie p{
+    color: black;
+    margin: 0px;
+    margin-top: 2px;
+}
+#addNewSection{
+    margin-left: 0px;
+    margin-top: 60px;
+    overflow-x: hidden;
+}
