@@ -30,6 +30,7 @@ section{
 .titleBox{
     display: flex;
     flex-direction: column;
+    flex: 1;
     margin-bottom: 0px;
     margin:10px;
     margin-top: 0px;
@@ -103,4 +104,18 @@ section{
     margin-left: 0px;
     margin-top: 60px;
     overflow-x: hidden;
+}
+.iconForSearch{
+    background-color: yellow;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    height: 45px;
+    /* position: relative; */
+    margin-top: 20px;
+}
+.titleBoxContainer{
+    display: flex;
+    width: 100%;
 }

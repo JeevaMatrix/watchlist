@@ -23,6 +23,8 @@ function App() {
   const [open , setOpen] = useState(true);
   const apikey = process.env.REACT_APP_TMDB_API;
 
+  const [searchIcon, setSearchIcon] = useState(false)
+
   // const [windowWidth, setWindowWidth] = useState(window.innerWidth)
   // const [data,setData] = useState([]) ;
   
@@ -54,7 +56,8 @@ function App() {
   useEffect(()=>{
     const fetchMovie = async()=>{
       try{
-        const res = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${apikey}&query=${addSearch}`, {
+        const res = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${apikey}&query=${addSearch}`, 
+        {
           headers: {
             "Authorization": "Bearer YOUR_API_KEY",
             "Content-Type": "application/json",
@@ -66,7 +69,7 @@ function App() {
         }
         const jsonData = await res.json()
         
-        setRecommendList(jsonData.results)
+        setRecommendList(jsonData.results || [])
       }catch(err){
         console.error(err.message)
       }
@@ -74,10 +77,8 @@ function App() {
     (async()=>fetchMovie())()
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  },[addSearch])
+  },[addSearch, searchIcon])
 
-
-  // const [clicked, setClicked] = useState(false)
 
   useEffect(()=>{
     function handleClick(event){
@@ -115,7 +116,7 @@ function App() {
               <Content  open={open} myList={myList}/>
               </>}
             /> 
-            <Route path='/addnew' element = {<AddNew myList={myList} setMyList={setMyList} addStatus={addStatus} setAddStatus={setAddStatus} recommendList={recommendList} addSearch={addSearch} setAddSearch={setAddSearch}/>} /> 
+            <Route path='/addnew' element = {<AddNew setSearchIcon={setSearchIcon} myList={myList} setMyList={setMyList} addStatus={addStatus} setAddStatus={setAddStatus} recommendList={recommendList} addSearch={addSearch} setAddSearch={setAddSearch}/>} /> 
             <Route path='/about' element = {<About/>} /> 
             <Route path=':id' element={<MovieDetails myList={myList} setMyList={setMyList} addStatus={addStatus} setAddStatus={setAddStatus}/>}></Route>
         </Routes>

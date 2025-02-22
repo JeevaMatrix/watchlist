@@ -1,17 +1,24 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { FaSearch } from "react-icons/fa";
 
 import '../css/addNew.css'
 import RecommendBox from './RecommendBox'
 import StatusElement from './StatusElement'
 import AlertBox from './AlertBox';
 
-const AddNew = ({myList, setMyList, addStatus,setAddStatus ,recommendList,addSearch,setAddSearch}) => {
+const AddNew = ({ myList, setMyList, addStatus,setAddStatus ,recommendList,addSearch,setAddSearch}) => {
 
   const [selectedMovie,setSelectedMovie] = useState({})
   const [popup,setPopup] = useState(false)
   const navigate = useNavigate()
+  const inputref = useRef()
+
+  function handleRecommend(e){
+    e.preventDefault();
+    setAddSearch(inputref.current.value)
+  }
 
 
   function handleNewMovie(e){
@@ -49,14 +56,18 @@ const AddNew = ({myList, setMyList, addStatus,setAddStatus ,recommendList,addSea
       <form className='addNewForm'action="">
         <h1>Add Movies to WatchList</h1>
 
-        <div className='titleBox'>
+        <div className='titleBoxContainer'>
+          <div className='titleBox'>
           <label id='titleLabel'>Title:</label>
           <input 
+            ref = {inputref}
             type="text" 
             id='addTitle'
             value={addSearch}
             onChange={(e)=>setAddSearch(e.target.value)}
           />
+          </div>
+          <button type='submit' onClick={(e)=>handleRecommend(e)} className='iconForSearch' ><FaSearch /></button>
         </div>
         <RecommendBox recommendList={recommendList} setSelectedMovie={setSelectedMovie} setAddSearch={setAddSearch} mode='add'/>
 
@@ -65,7 +76,7 @@ const AddNew = ({myList, setMyList, addStatus,setAddStatus ,recommendList,addSea
           <h3>{selectedMovie?.title?.slice(0, 35) || ""}</h3>       {/*need to modify */}
           <p>{selectedMovie.release_date}</p>
         </div>
-
+        
         <StatusElement popup={popup} setAddStatus={setAddStatus}/>
 
         <button 
