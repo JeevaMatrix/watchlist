@@ -59,7 +59,7 @@ function App() {
         const res = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${apikey}&query=${addSearch}`, 
         {
           headers: {
-            "Authorization": "Bearer YOUR_API_KEY",
+            "Authorization": `Bearer ${apikey}`,
             "Content-Type": "application/json",
           },
           mode: "cors",
