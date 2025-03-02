@@ -1,0 +1,66 @@
+#detailsPage{
+    display: grid;
+    grid-template-columns: 1fr minmax(200px,3fr);
+    align-items: center;
+}
+@media (max-width: 500px) { 
+    #detailsPage {
+        grid-template-columns: 1fr;
+    }
+}
+#detailsPad{
+    border: 1px solid black;
+    max-height: 800px;
+    min-height: 260px;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.ModifyBtns{
+    display: flex;
+}
+/* .ModifyBtns :nth-child(n){
+    margin: 10px;
+    margin-left: 20px;
+    text-align: center;
+} */
+.DeleteBtn{
+    font-size: larger;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #09122C;
+    color: white;
+    cursor: pointer;
+}
+.UpdateBtn{
+    font-size: large;
+    background: none;
+    border: none;
+    border-radius: 8px;
+    background-color: #09122C;
+    color: white;
+    padding: 10px;
+    margin: 20px;
+    cursor: pointer;
+}
+.DeleteBtn:hover{
+    color: rgb(255, 3, 3);
+}
+.UpdateBtn:hover{
+    color: rgb(3, 255, 41);
+}
+.SaveBtn{
+    font-size: large;
+    background: none;
+    border: none;
+    border-radius: 8px;
+    background-color: #080e21;
+    color: white;
+    padding: 10px;
+    margin: 20px;
+    cursor: pointer;
+}

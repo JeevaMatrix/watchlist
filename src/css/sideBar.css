@@ -1,0 +1,127 @@
+nav{
+    display: flex;
+    flex-direction: column ;
+    justify-content: flex-start;
+    background-color: white;
+    overflow-y: hidden;
+}
+.sideContainer{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-top: 10px;
+}
+.sideBtn{
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.absIcon{
+    font-size:xx-large;
+    padding: 10px;
+    background: none;
+    border: none;
+    margin-left: 5px;
+    margin-top: 10px;
+    top: 0;
+    position: fixed;
+    z-index: 1;
+}
+
+.barOn{
+    border-right: 2px solid black;
+    border-radius: 10px;
+    transition: border 0.5s ease-in-out;
+}
+.barOn .noabsIcon{
+    font-size:xx-large;
+    padding: 10px;
+    background: none;
+    border: none;
+    margin-left: -5px;
+    text-align: left;
+    left: 10px;
+    top: 10px;
+    position: relative;
+}
+.barOn .sideLayout{
+    width: 250px;
+    position: sticky;
+    top: 0;
+    overflow-y: hidden;
+    height: 100vh;
+}
+
+.barOff{
+    width: 250px;
+    position: fixed;
+    border-right: none;
+}
+.barOff .absIcon{
+    font-size:xx-large;
+    padding: 10px;
+    background: none;
+    border: none;
+    margin-left: 5px;
+    margin-top: 10px;
+    top: 0;
+    position: fixed;
+    z-index: 1;
+}
+.barOff .hide{
+    transform: translate(-100%);
+}
+.show {
+    transform: translate(0%);
+    transition: transform 1s ease-in-out;
+}
+.barOff .sideContainer {
+    position: relative;
+    top: 55px;
+}
+.sideBtn{
+    text-decoration: none;
+    color: black;
+    background-color: white;
+}
+.sideBtn:hover{
+    background-color: black;
+    color: white;
+    font-size: large;
+}
+/* @media all and (max-width: 800px) {
+    nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 250px; 
+        height: 100vh;
+        background-color: white;
+        transition: transform 0.3s ease-in-out;
+        transform: translateX(-100%);
+    }
+
+    .barOn {
+        transform: translateX(0); 
+    }
+
+    .barOff {
+        transform: translateX(-100%); 
+    }
+    
+} */
+
+@media all and (max-width:800px){
+    .barOn{
+        position: absolute;
+        z-index: 1;
+    }
+    .barOff{
+        position: normal;
+    }
+    .barOff .absIcon{
+        top: 10px;
+        z-index: 1;
+    }
+}
