@@ -78,7 +78,7 @@ function App() {
   useEffect(() => {
     const fetchMovie = async () => {
         try {
-            const res = await axios.get("http://localhost:5000/api/movies", {
+            const res = await axios.get("https://movie-watchlist-4ibi.onrender.com/api/movies", {
                 params: { query: addSearch }, 
             });
 
