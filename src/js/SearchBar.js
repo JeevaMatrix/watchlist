@@ -1,6 +1,4 @@
-import React, { useEffect, useState } from 'react'
-import { FaSearch } from "react-icons/fa";
-// import './app.css';
+import React, { useEffect } from 'react'
 import '../css/searchBar.css'
 import RecommendBox from './RecommendBox';
 

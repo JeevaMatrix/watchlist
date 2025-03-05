@@ -4,40 +4,78 @@ import '../css/about.css'
 const About = () => {
   return (
     <div className='abt'>
-        <h1>About this Project</h1>
-        <p>
-        Hey, I'm Jeeva—a MERN stack developer, UI sculptor, and a dev on a mission to turn ideas into interactive web experiences. <br /><br />
+<h1>About This Project</h1>
+      <p>
+        Hey, I'm <strong>Jeeva</strong>—a MERN stack developer, UI sculptor, and a dev on a
+        mission to turn ideas into interactive web experiences.
+      </p>
+      <p>
+        This project is a <strong>Movie Watchlist App</strong> built using{" "}
+        <strong>React, Node.js, and Express</strong>. It allows users to search for movies,
+        add them to a watchlist, and manage their collection seamlessly. Through this
+        project, I gained hands-on experience in <strong>full-stack development</strong>,
+        including API integration, backend logic, and state management.
+      </p>
 
-  This project is a <strong>Movie Watchlist App</strong> built using <strong>React</strong>. It allows users to 
-  <strong>search for movies, add them to a watchlist, and manage their collection</strong> easily. Through this project, 
-  I gained hands-on experience in <strong>React state management, API integration, event handling, and responsive design</strong>.<br/><br/>
+      <h2>🔹 Key Features & Implementation</h2>
 
-  🔹 <strong>Key Features & Implementation:</strong><br/>
-  <strong>🔍 Movie Search & Recommendations:</strong> Implemented a <strong>live search bar</strong> that fetches movie data dynamically. 
-  Used <code>fetch</code> inside <code>useEffect</code> for API calls and optimized performance using <strong>debouncing</strong>.<br/><br/>
+      <h3>Frontend (React)</h3>
+      <ul>
+        <li>
+          🔍 <strong>Movie Search & Recommendations:</strong> Implemented a live search
+          bar that fetches movie data dynamically using the TMDB API. Optimized performance
+          using debouncing.
+        </li>
+        <li>
+          📌 <strong>Movie Watchlist (CRUD Operations):</strong> Users can add, view, and
+          delete movies from the watchlist. The frontend efficiently interacts with the
+          backend to store and retrieve data.
+        </li>
+        <li>
+          📂 <strong>Sidebar Navigation & Mobile Responsiveness:</strong> Created a
+          collapsible sidebar for navigation, built with CSS Grid & Flexbox for a smooth
+          UI.
+        </li>
+        <li>
+          ⚡ <strong>State Management & Optimizations:</strong> Managed state using
+          <code> useState </code> and <code> useEffect </code>, optimized performance with
+          conditional rendering and memoization.
+        </li>
+        <li>
+          🎨 <strong>Improved User Experience:</strong> Implemented automatic redirection
+          after adding a movie, ensured smooth event handling, and built a fully
+          responsive UI.
+        </li>
+      </ul>
 
-  <strong>📌 Movie Watchlist (CRUD Operations):</strong> Users can add, view, and delete movies from the watchlist. Data is stored 
-  in <strong>React state</strong> and <strong>local storage</strong> for persistence while preventing duplicates using <code>.find()</code>.<br/><br/>
+      <h3>Backend (Node.js & Express)</h3>
+      <ul>
+        <li>
+          🗄️ <strong>Express Server & API Integration:</strong> Built a Node.js server
+          with Express to handle API requests. The backend acts as a bridge between the
+          frontend and external movie data sources.
+        </li>
+      </ul>
 
-  <strong>📂 Sidebar Navigation & Mobile Responsiveness:</strong> Created a <strong>collapsible sidebar</strong> with a menu icon 
-  for navigation. Used <strong>CSS Grid & Flexbox</strong> for layout and added <strong>click-outside-to-close</strong> functionality for small screens.<br/><br/>
+      <h2>🚀 Future Plans (Database Integration)</h2>
+      <ul>
+        <li>🔑 MongoDB database for persistent storage</li>
+        <li>🔑 JWT authentication for user-specific watchlists</li>
+        <li>🔑 Improved API request handling & security</li>
+      </ul>
 
-  <strong>⚡ State Management & Optimizations:</strong> Managed state efficiently with <code>useState</code> and <code>useEffect</code>, 
-  optimized performance using <strong>conditional rendering</strong>, and prevented <strong>unnecessary re-renders</strong>.<br/><br/>
-
-  <strong>🎨 Improved User Experience:</strong> Implemented automatic redirection with <code>setTimeout</code> after adding a movie, 
-  ensured smooth event handling, and built a fully <strong>responsive UI</strong>.<br/><br/>
-
-  🚀 <strong>What I Learned & Challenges Faced:</strong><br/>
-  ✔ Handling API calls & managing asynchronous data<br/>
-  ✔ Efficient state management in React<br/>
-  ✔ Optimizing performance with debouncing & memoization<br/>
-  ✔ Building a responsive and user-friendly UI<br/><br/>
-
-  One challenge was <strong>preventing unnecessary re-renders</strong> when updating states. Debugging dependencies in <code>useEffect</code> 
-  was a great learning experience. This project strengthened my <strong>React skills</strong> and improved my problem-solving abilities! 🔥
-</p>
-
+      <h2>🚀 What I Learned & Challenges Faced</h2>
+      <ul>
+        <li>✔ Setting up a backend with Express.js</li>
+        <li>✔ Handling API requests & structuring routes</li>
+        <li>✔ Connecting frontend and backend effectively</li>
+        <li>✔ Optimizing performance with debouncing & caching</li>
+      </ul>
+      <p>
+        One major challenge was <strong>ensuring seamless communication between React and
+        Express</strong> while handling async operations. Debugging API responses and
+        structuring routes efficiently was a great learning experience! 🔥
+      </p>
     </div>
   )
 }
